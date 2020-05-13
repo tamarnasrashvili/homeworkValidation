@@ -1,0 +1,54 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<div class="container">
+    <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">გაიარეთ რეგისტრაცია</h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" asp-action="Registration" asp-controller="Auth" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="Name" class="form-control input-sm" placeholder="სახელი">
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="Lastname" class="form-control input-sm" placeholder="გვარი">
+                                    <span asp-validation-for="Lastname" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Email" class="form-control input-sm" placeholder="ელ ფოსტა">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="Password" class="form-control input-sm" placeholder="პაროლი">
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input asp-for="PasswordConfirmation" class="form-control input-sm" placeholder="გაიმეორეთ პაროლი">
+                                    <span asp-validation-for="PasswordConfirmation" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" value="რეგისტრაცია" class="btn btn-info btn-block">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

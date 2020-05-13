@@ -1,0 +1,14 @@
+﻿@model MovieVM
+<tbody id="tableBody">
+    @foreach (var item in Model.Movies)
+    {
+        <tr>
+            <th scope="row">@item.Id</th>
+            <th scope="row">@item.Title</th>
+            <th scope="row">
+                <a asp-action="EditMovie" asp-controller="Manage" asp-route-id="@item.Id"
+                   class="btn btn-outline-info editBtn">რედაქტირება</a>
+            </th>
+        </tr>
+    }
+</tbody>
